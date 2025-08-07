@@ -24,7 +24,6 @@ This Python script collects subdomains for a given list of domains using [Subfin
 ## ⚙️ Requirements
 
 Make sure you have the following installed:
-
 - Python 3.6+
 - MongoDB (running locally or remotely)
 - [Subfinder](https://github.com/projectdiscovery/subfinder) (must be available in your system PATH)
@@ -32,3 +31,35 @@ Make sure you have the following installed:
 
 ```bash
 pip install pymongo
+```
+#🛠️ How It Works
+Connects to MongoDB at mongodb://localhost:27017/
+
+Reads a list of domains from the Scope collection in the Sh4z0 database
+
+Runs subfinder on each domain to discover subdomains
+
+For each discovered subdomain:
+
+Strips empty lines and whitespace
+
+Checks if it's already in the Domian collection
+
+If not, inserts it with a timestamp
+##Example MongoDB Structure
+Database: Sh4z0
+Collection: Scope
+```
+{
+  "Domian": "example.com"
+}
+Collection: Domian
+}
+```
+
+```
+{
+  "domian": "sub.example.com",
+  "timestamp": "2025-08-07 12:34:56"
+}
+```
