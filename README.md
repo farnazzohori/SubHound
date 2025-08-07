@@ -1,8 +1,16 @@
 #  Subdomain Collector with MongoDB & Subfinder
-
+```
+ _____       _     _   _                       _ 
+/  ___|     | |   | | | |                     | |
+\ `--. _   _| |__ | |_| | ___  _   _ _ __   __| |
+ `--. \ | | | '_ \|  _  |/ _ \| | | | '_ \ / _` |
+/\__/ / |_| | |_) | | | | (_) | |_| | | | | (_| |
+\____/ \__,_|_.__/\_| |_/\___/ \__,_|_| |_|\__,_|
+```
 This Python script collects subdomains for a given list of domains using [Subfinder](https://github.com/projectdiscovery/subfinder) and stores the results in a MongoDB database. It avoids duplicates, keeps a timestamp for each entry, and automates subdomain enumeration for scope-based domain lists.
 
 ---
+
 
 ## 📌 Features
 
